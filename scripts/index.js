@@ -45,6 +45,15 @@ function buildRow(someTableBody, someData){
 
     let titleCell = row.insertCell();
     titleCell.innerHTML = someData.courseName
+
+    let DetailCell = row.insertCell();
+    DetailCell.innerHTML = 
+    `<a href ="./details.html?courseid=${someData.id}"> Show details </a>`
+
+    let adminCell = row.insertCell();
+    adminCell.innerHTML = 
+    `<a href ="./edit_course.html?courseid=${someData.id}"> Edit Course </a> &nbsp;
+    <a href ="./delete_course.html?courseid=${someData.id}"> Delete Course </a>`
 }
 
 async function getCourses(){
